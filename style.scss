@@ -1,0 +1,96 @@
+@import './utils';
+@import './media-queries';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-image: url('sfondo.jpg');
+}
+
+
+html,body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        @include flexCenter;
+        font-family: 'Lobster', cursive;
+        margin: 40px;
+        padding: 0.3rem 2rem;
+        border: 2px solid black;
+        @include shadow-container;
+    
+
+        span {
+            color: rgb(120, 72, 72);
+            background: $background-box;
+        }
+    }
+
+
+    .container {
+        @include flexCenter;
+
+        border: 2px solid black;
+        width: 50rem;
+        height: auto;
+
+        @include shadow-container;
+
+        @include tablet {
+            width: 35rem;
+            flex-direction: column
+        }
+
+        @include mobile {
+            width: 25rem;
+        }
+    
+
+
+        &-left {
+            @include flexCenter;
+            flex-direction: column;
+            margin: 20px;
+            background: $background-box;
+        }
+
+        button {
+            border: 2px solid black;
+            border-radius: 30%;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+        
+
+            i {
+                padding: 5px;
+                border-radius: 30%;
+                background: rgb(144, 80, 80);
+                color: white;
+            }
+        }
+
+        &-right {
+            @include flexCenter;
+            flex-direction: column;
+            margin: 20px;
+            background: $background-box;
+
+
+        }
+
+        select {
+            @include input-select;
+        }
+
+        input {
+            @include input-select;
+        }
+    }
+}

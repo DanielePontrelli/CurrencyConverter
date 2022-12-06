@@ -1,0 +1,26 @@
+$background-box: rgba(119, 116, 116, 0.0);
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin shadow-container {
+    border-radius: 30px;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    background: rgba(119, 116, 116, 0.7);
+}
+
+@mixin input-select {
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    background: white;
+}
